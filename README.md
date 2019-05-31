@@ -74,27 +74,34 @@ These commands will kill and remove all running containers, and should remove al
 
 
 docker kill $(docker ps -q)
+
 docker rm $(docker ps -aq)
+
 docker rmi $(docker images dev-* -q)
 
-run the above command.
-After this:-
+# run the above command.After this:-
 
-Uninstalling the CLI tools ( 4 commands ):
+# Uninstalling the CLI tools ( 4 commands ):
 
 $ npm uninstall composer-cli 
+
 $ npm uninstall composer-rest-server 
+
 $ npm uninstall -g generator-hyperledger-composer
+
 $ npm uninstall -g yo
 
-and installing them again
+# And installing them again
 
 $ npm install -g composer-cli@0.19.0
+
 $ npm install -g composer-rest-server
+
 $ npm install -g generator-hyperledger-composer
+
 $ npm install -g yo
 
-After that all, check
+# After that all, check
 
 composer -v.
 
